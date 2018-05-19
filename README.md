@@ -1,2 +1,6 @@
 # machine-learning
-Some methodologies of machine learning
+1. Gradient Descent
+
+2. Naive Bayes
+
+3. Support Vector Machine
