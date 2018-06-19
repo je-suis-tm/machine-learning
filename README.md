@@ -1,8 +1,10 @@
 # machine-learning
 1. Gradient Descent
 
-2. Naive Bayes
+2. LOWESS
 
-3. Support Vector Machine
+3. Naive Bayes
 
-4. K Means
+4. Support Vector Machine
+
+5. K Means
