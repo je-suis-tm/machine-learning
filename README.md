@@ -1,7 +1,7 @@
 # machine-learning
 1. Gradient Descent
 
-2. LOWESS
+2. Logistic
 
 3. Naive Bayes
 
