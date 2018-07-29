@@ -1,7 +1,7 @@
 # machine-learning
 1. Gradient Descent
 
-2. Logistic
+2. Newton Method for Logistic Regression
 
 3. Naive Bayes
 
