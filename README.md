@@ -1,5 +1,6 @@
-# machine-learning
-1. Gradient Descent
+# Python implementation for machine learning by Prof. Andrew Ng
+
+1. Gradient Descent (Batch/Stochastic)
 
 2. Newton Method for Logistic Regression
 
