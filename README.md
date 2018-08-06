@@ -4,8 +4,9 @@
 
 2. Newton Method for Logistic Regression
 
-3. Naive Bayes
+3. Gaussian Discriminant Analysis
 
-4. Support Vector Machine
+4. Naive Bayes
 
-5. K Means
+5. Support Vector Machine
+
