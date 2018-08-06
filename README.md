@@ -11,3 +11,5 @@
 5. Support Vector Machine
 
 6. Neural Network
+
+7. K Means
