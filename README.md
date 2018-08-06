@@ -10,3 +10,4 @@
 
 5. Support Vector Machine
 
+6. Neural Network
