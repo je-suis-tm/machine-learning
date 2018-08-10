@@ -1,4 +1,4 @@
-# Python implementation for machine learning by Prof. Andrew Ng
+# Machine Learning Algorithm Implementation
 
 1. Gradient Descent (Batch/Stochastic)
 
