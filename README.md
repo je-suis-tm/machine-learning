@@ -6,7 +6,7 @@
 
 3. Gaussian Discriminant Analysis
 
-4. Naive Bayes
+4. Naive Bayes (Multivariate/Multinomial)
 
 5. Support Vector Machine
 
