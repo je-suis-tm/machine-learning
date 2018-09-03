@@ -13,3 +13,5 @@
 6. Neural Network
 
 7. K Means
+
+*Note that I have also included an optimized Naive Bayes implementation with memoization cuz sklearn is really too slow for any practical use.*
