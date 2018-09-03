@@ -6,7 +6,7 @@
 #the default sklearn package is so damnnnn slow
 #so i use a lil memoization technique to improve its time complexity
 #for details of naive bayes, plz refer to the following link
-#
+# https://github.com/tattooday/machine-learning/blob/master/naive%20bayes.ipynb
 
 import pandas as pd
 import re
