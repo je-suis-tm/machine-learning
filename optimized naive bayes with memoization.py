@@ -177,7 +177,7 @@ def main():
     
     """
     df=pd.read_csv('testing data.csv',encoding='latin-1')
-    new=multivariate_forecast(df,dic,stopword)
+    new=name_of_this_script.multivariate_forecast(df,dic,name_of_this_script.stopword)
     new.to_csv('testing data.csv',encoding='utf_8_sig')
     """
 
