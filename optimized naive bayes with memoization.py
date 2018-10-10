@@ -18,6 +18,9 @@ os.chdir('h:/')
 # In[2]:
 
 #convert text into a list of words
+#we use stemming to save space and also improve efficiency
+#for instance, we have words walked,walking,walks
+#now all of them are stemmed to walk
 def text2list(text,lower=True):
 
     temp=text if lower==False else text.lower()
