@@ -11,19 +11,21 @@
 import pandas as pd
 import re
 import os
+from nltk.stem import PorterStemmer
 os.chdir('h:/')
 
 
 # In[2]:
 
 #convert text into a list of words
-def text2list(text,lower=False):
-    
+def text2list(text,lower=True):
+
     temp=text if lower==False else text.lower()
     regex=re.findall('\w*',temp)
-    output=list(filter(lambda x: x!='',regex))
-    
-    return output
+    temp=list(filter(lambda x: x!='',regex))
+    output=[PorterStemmer().stem(i) for i in temp]
+
+return output
 
 
 # In[3]:
