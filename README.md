@@ -8,7 +8,7 @@
 
 4. Naive Bayes (Multivariate/Multinomial)
 
-5. Support Vector Machine
+5. Support Vector Machine (Binary/Multiclass)
 
 6. Neural Network
 
