@@ -11,6 +11,8 @@
 import pandas as pd
 import re
 import os
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 os.chdir('h:/')
 
@@ -24,9 +26,9 @@ os.chdir('h:/')
 def text2list(text,lower=True):
 
     temp=text if lower==False else text.lower()
-    regex=re.findall('\w*',temp)
-    temp=list(filter(lambda x: x!='',regex))
-    output=[PorterStemmer().stem(i) for i in temp]
+    tokenizer=RegexpTokenizer(r'\w+')
+    output=[PorterStemmer().stem(i) for i in tokenizer.tokenize(temp) if i not in stopword]
+    
 
 return output
 
@@ -150,15 +152,30 @@ def multivariate_forecast(df,dic,stopword):
 
 #this is the stopword i have thought of
 #anything i am missing?
-stopword=['i','we','our','my','me','you',           
-          'your','to','ours','yours','him','his',           
-          'he','her','hers','she','they','their',           
-          'theirs','them','in','s','of','for',           
-          'u', 'the', 'with', 'a', 'us', 'and',           
-          'on', 'from','as', 'over', 'after',            
-          'is', 'are', 'by','at','above','beyond',          
-          'after','before','within','around','about',           
-          'up','will','would','be']
+stopword=stopwords.words('english')+['u',
+ 'beyond',
+ 'within',
+ 'around',
+ 'would',
+ 'b',
+ 'c',
+ 'e',
+ 'f',
+ 'g',
+ 'h',
+ 'j',
+ 'k',
+ 'l',
+ 'n',
+ 'p',
+ 'q',
+ 'r',
+ 'u',
+ 'v',
+ 'w',
+ 'x',
+ 'z',
+ 'first']
 
 
 #when this file is run as a main
