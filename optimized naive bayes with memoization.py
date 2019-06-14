@@ -14,23 +14,31 @@ import os
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+from nltk.stem.wordnet import WordNetLemmatizer
 os.chdir('h:/')
 
 
 # In[2]:
 
 #convert text into a list of words
-#we use stemming to save space and also improve efficiency
+#we use stemming and lemmatization to save space and improve efficiency
 #for instance, we have words walked,walking,walks
-#now all of them are stemmed to walk
-def text2list(text,lower=True):
+#now all of them are walk
+def text2list(text,stopword,lower=True):
 
     temp=text if lower==False else text.lower()
     tokenizer=RegexpTokenizer(r'\w+')
-    output=[PorterStemmer().stem(i) for i in tokenizer.tokenize(temp) if i not in stopword]
+    temp2=[WordNetLemmatizer().lemmatize(i) for i in tokenizer.tokenize(temp)]
+    output=[PorterStemmer().stem(i) for i in temp2 if i not in stopword]
     
-
-return output
+    for i in output:
+        try:
+            float(i)
+            output.remove(i)
+        except:
+            pass
+    
+    return output
 
 
 # In[3]:
