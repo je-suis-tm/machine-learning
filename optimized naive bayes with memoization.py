@@ -3,8 +3,29 @@
 # In[1]:
 
 #this is simply an optimization for naive bayes
-#the default sklearn package is so damnnnn slow
-#so i use a lil memoization technique to improve its time complexity
+#the default sklearn package is so damnnnn slow for large scale of text data
+#for small dataset (refer to vocabulary size less than 10000)
+#you can consider using the following part instead
+
+"""
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+def nlp(ds_train,ds_test):
+    
+    ds_train['clean']=[' '.join(text2list(i,stopword,lower=True)) for i in ds_train['title']]
+    train=CountVectorizer()
+    train_matrix=train.fit_transform(ds_train['clean'])
+    clf=MultinomialNB().fit(train_matrix,ds_train['spam'])
+    
+    ds_test['clean']=[' '.join(text2list(i,stopword,lower=True)) for i in ds_test['title']]
+    test_matrix=CountVectorizer(vocabulary=train.vocabulary_).fit_transform(ds_test['clean'])
+    ds_test['spam']=clf.predict(test_matrix)
+    
+    return ds_test[ds_test['spam']==0]
+"""
+
+#for large dataset, we can apply a memoization technique to improve its time complexity
 #for details of naive bayes, plz refer to the following link
 # https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb
 
@@ -23,7 +44,7 @@ os.chdir('h:/')
 #convert text into a list of words
 #we use stemming and lemmatization to save space and improve efficiency
 #for instance, we have words walked,walking,walks
-#now all of them are walk
+#with nltk package, we can revert all of them to walk
 def text2list(text,stopword,lower=True):
 
     temp=text if lower==False else text.lower()
@@ -31,6 +52,7 @@ def text2list(text,stopword,lower=True):
     temp2=[WordNetLemmatizer().lemmatize(i) for i in tokenizer.tokenize(temp)]
     output=[PorterStemmer().stem(i) for i in temp2 if i not in stopword]
     
+    #remove numbers as they are stopword as well
     for i in output:
         try:
             float(i)
@@ -77,7 +99,7 @@ def multivariate_calc_prob(word,x_train,y_train,classification):
 
 #memoization
 #calculate every conditional probability in our training dataset
-#and we store these probabilities in a local folder
+#and store these probabilities in a local folder
 #so everytime we wanna make forecast
 #we do not need to caculate these probabilities again
 def multivariate_store_prob(sample,stopword):
@@ -194,7 +216,7 @@ stopword=stopwords.words('english')+['u',
 def main():
     
     #i use latin-1 cuz utf_8_sig cannot encode some characters
-    #some symbols could turn out to be a mess
+    #some punctuations could turn out to be a mess
     #as we only care about words and we have regex to fix it
     #we do not need to worry too much about it
     #and dic is shorter form for dictionary:P
