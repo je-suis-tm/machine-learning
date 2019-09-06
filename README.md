@@ -1,5 +1,8 @@
 # Machine Learning Algorithm Implementation
 
+> Nothing makes you understand it better than rebuilding the wheel.
+> - T.M.
+
 1. Gradient Descent (Batch/Stochastic)
 
 2. Newton Method for Logistic Regression
@@ -10,8 +13,6 @@
 
 5. Support Vector Machine (Binary/Multiclass/DAG/SMO)
 
-6. Neural Network
+6. Decision Tree
 
 7. K Means
-
-*Note that I have also included an optimized Naive Bayes implementation with memoization cuz sklearn is really too slow for any practical use.*
