@@ -1,7 +1,6 @@
 # Machine Learning Algorithm Implementation
 
-> Nothing makes you understand it better than rebuilding the wheel.
-
+> Nothing makes you understand it better than rebuilding the wheel.<br>
 > --- T.M.
 
 1. Gradient Descent (Batch/Stochastic)
