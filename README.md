@@ -1,6 +1,6 @@
 ## Machine Learning Algorithm Implementation
 
-> Nothing makes you understand it better than rebuilding the wheel.<br>
+> Reinventing the wheel is the best way to develop a deep understanding of the knowledge.<br>
 > --- T.M.
 
 <hr>
