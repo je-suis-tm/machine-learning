@@ -1,6 +1,6 @@
 ## Machine Learning Algorithm Implementation
 
-> Reinventing the wheel is the best way to develop a deep understanding of the knowledge.<br>
+> You never truly understands how a wheel works until you reinvent it.<br>
 > --- T.M.
 
 <hr>
