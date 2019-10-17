@@ -15,6 +15,6 @@
 
 5. Support Vector Machine (Binary/Multiclass/DAG/SMO)
 
-6. Decision Tree
+6. Decision Tree/Random Forest
 
 7. K Means
