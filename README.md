@@ -11,7 +11,7 @@
 
 3. Gaussian Discriminant Analysis
 
-4. Naive Bayes (Multivariate/Multinomial)
+4. Naive Bayes (Multivariate/Multinomial/KL Divergence)
 
 5. Support Vector Machine (Binary/Multiclass/DAG/SMO)
 
