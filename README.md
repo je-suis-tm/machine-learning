@@ -18,3 +18,5 @@
 6. Decision Tree/Random Forest
 
 7. K Means
+
+8. K Nearest Neighbors
