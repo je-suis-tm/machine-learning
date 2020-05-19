@@ -20,3 +20,5 @@
 7. K Means
 
 8. K Nearest Neighbors
+
+9. DBSCAN
