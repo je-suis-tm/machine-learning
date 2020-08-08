@@ -1,6 +1,6 @@
 ## Machine Learning Algorithm Implementation
 
-> You never truly understands how a wheel works until you reinvent it.<br>
+> You never truly understand how a wheel works until you reinvent it.<br>
 > --- T.M.
 
 <hr>
@@ -22,3 +22,5 @@
 8. K Nearest Neighbors
 
 9. DBSCAN
+
+10. Gaussian Mixed Model
