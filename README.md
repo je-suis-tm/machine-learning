@@ -1,9 +1,11 @@
-## Machine Learning Algorithm Implementation
+## Machine Learning
 
 > You never truly understand how a wheel works until you reinvent it.<br>
 > --- T.M.
 
 <hr>
+
+### Algorithms
 
 1. Gradient Descent (Batch/Stochastic)
 
@@ -24,3 +26,7 @@
 9. DBSCAN
 
 10. Gaussian Mixed Model
+
+### Applications
+
+1. Reverse Engineering project
