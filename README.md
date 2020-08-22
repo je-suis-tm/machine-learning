@@ -1,5 +1,7 @@
 # Machine Learning
 
+## Intro
+
 > You never truly understand how a wheel works until you reinvent it.<br>
 > --- T.M.
 
@@ -29,4 +31,4 @@
 
 ## Applications
 
-1. Reverse Engineering project
+### 1. Reverse Engineering project
