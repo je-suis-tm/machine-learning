@@ -32,3 +32,5 @@
 ## Applications
 
 ### 1. Reverse Engineering project
+
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/preview/reverse-engineering.png)
