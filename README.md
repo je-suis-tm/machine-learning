@@ -27,7 +27,7 @@
 
 9. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>
 
-10. Gaussian Mixed Model
+10. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>
 
 ## Applications
 
