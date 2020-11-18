@@ -27,10 +27,13 @@
 
 9. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>
 
-10. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model/Expectation Maximization</a>
+10. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Expectation Maximization</a>
 
 ## Applications
 
 ### 1. Reverse Engineering project
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20elbow%20method.png)
+
+For more details, please refer to the <a href=https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/README.md>read me page</a> of a separate directory or <a href=https://je-suis-tm.github.io/machine-learning/reverse-engineering>machine learning section on my personal blog.
+
