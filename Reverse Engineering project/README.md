@@ -1,10 +1,12 @@
 # Reverse Engineering
 
+### K Means
+
+##### Bar Chart
+
 ![Alt Text](https://github.com/je-suis-tm/graph-theory/blob/master/Epidemic%20Outbreak%20project/preview/graph-degree%20distribution.png)
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/bar%20chart.png)
-
-### K Means
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20elbow%20method.png)
 
@@ -15,6 +17,8 @@
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/bar%20rendered2%20kmeans.png)
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/bar%20chart%20re%20kmeans.png)
+
+##### Line Chart
 
 ![Alt Text](https://github.com/je-suis-tm/quant-trading/blob/master/Smart%20Farmers%20project/preview/oil%20palm%20vs%20palm%20oil.png)
 
@@ -30,9 +34,13 @@
 
 ### Gaussian Mixture
 
+##### Bar Chart
+
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20dirichlet.jpg)
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20gmm.jpg)
+
+##### Line Chart
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20line%20dirichlet.jpg)
 
