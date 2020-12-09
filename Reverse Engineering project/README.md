@@ -34,7 +34,7 @@ Creating a visualization from data is easy. In Tableau, it's only one click. Wha
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/line%20chart%20re%20%20kmeans.png)
 
-### Gaussian Mixture
+### Mixture
 
 ##### Bar Chart
 
@@ -50,7 +50,7 @@ Creating a visualization from data is easy. In Tableau, it's only one click. Wha
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/line%20erosion2%20gmm.png)
 
-### DBSCAN
+### Density
 
 ##### Bar Chart
 
