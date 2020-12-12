@@ -28,7 +28,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 8. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/k%20nearest%20neighbors.ipynb>K Nearest Neighbors</a>
 
-9. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>
+9. Density (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/optics.ipynb>OPTICS</a>)
 
 10. Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/Naïve Bayes Mixture Model)
 
