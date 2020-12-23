@@ -4,13 +4,13 @@
 -----------------------------------------
 ### Table of Contents
 
-* <a href=https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project#intro>Intro</a>
+* <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#intro>Intro</a>
 
-* <a href=https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project#centroid-model>Centroid Model</a>
+* <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#centroid-model>Centroid Model</a>
 
-* <a href=https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project#density-model>Density Model</a>
+* <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#distribution-model>Distribution Model</a>
 
-* <a href=https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project#distribution-model>Distribution Model</a>
+* <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#density-model>Density Model</a>
 ------------------------------------------------
 &nbsp;
 
