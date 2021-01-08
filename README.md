@@ -30,7 +30,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 9. Density (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/optics.ipynb>OPTICS</a>)
 
-10. Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/Naïve Bayes Mixture Model)
+10. Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes%20mixture%20model.ipynb>Naïve Bayes Mixture Model</a>)
 
 ## Applications
 
