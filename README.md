@@ -12,25 +12,29 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 ## Algorithms
 
-1. Gradient Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Batch</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Stochastic</a>)
+### Supervised
 
-2. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/newton%20method%20for%20logistic%20regression.ipynb>Newton Method for Logistic Regression</a>
+* Generative Learning (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20discriminant%20analysis.ipynb>Gaussian Discriminant Analysis</a>)
 
-3. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20discriminant%20analysis.ipynb>Gaussian Discriminant Analysis</a>
+* Gradient Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Batch</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Stochastic</a>)
 
-4. Naïve Bayes (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multivariate</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multinomial</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>KL Divergence</a>)
+* Naïve Bayes (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multivariate</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multinomial</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>KL Divergence</a>)
 
-5. Support Vector Machine (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/binary%20support%20vector%20machine.ipynb>Binary</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/multiclass%20support%20vector%20machine.ipynb>Multiclass</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/multiclass%20support%20vector%20machine.ipynb>DAG</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/sequential%20minimal%20optimization.ipynb>SMO</a>)
+* Newton Method (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/newton%20method%20for%20logistic%20regression.ipynb>Logistic Regression</a>)
 
-6. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/decision%20tree%20and%20random%20forest.ipynb>Decision Tree</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/decision%20tree%20and%20random%20forest.ipynb>Random Forest</a>
+* Support Vector Machine (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/binary%20support%20vector%20machine.ipynb>Binary</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/multiclass%20support%20vector%20machine.ipynb>Multiclass</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/multiclass%20support%20vector%20machine.ipynb>DAG</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/sequential%20minimal%20optimization.ipynb>SMO</a>)
 
-7. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/k%20means.ipynb>K Means</a>
+* Tree-based Learning (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/decision%20tree%20and%20random%20forest.ipynb>Decision Tree</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/decision%20tree%20and%20random%20forest.ipynb>Random Forest</a>)
 
-8. <a href=https://github.com/je-suis-tm/machine-learning/blob/master/k%20nearest%20neighbors.ipynb>K Nearest Neighbors</a>
+* Instance-based Learning (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/k%20nearest%20neighbors.ipynb>K Nearest Neighbors</a>)
 
-9. Density (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/optics.ipynb>OPTICS</a>)
+### Unsupervised
 
-10. Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes%20mixture%20model.ipynb>Naïve Bayes Mixture Model</a>)
+* Centroid-based Model (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/k%20means.ipynb>K Means</a>)
+
+* Density-based Model (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/optics.ipynb>OPTICS</a>)
+
+* Distribution-based Model with Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes%20mixture%20model.ipynb>Naïve Bayes Mixture Model</a>)
 
 ## Applications
 
