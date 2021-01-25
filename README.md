@@ -36,6 +36,8 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 * Distribution-based Model with Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes%20mixture%20model.ipynb>Naïve Bayes Mixture Model</a>)
 
+* Dimension Reduction (Factor Analysis/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Principal Component Analysis</a>)
+
 ## Applications
 
 ### 1. Reverse Engineering project
