@@ -18,7 +18,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 * Gradient Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Batch</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Stochastic</a>)
 
-* Naïve Bayes (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multivariate</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multinomial</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>KL Divergence</a>)
+* Naïve Bayes (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multivariate</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multinomial</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>TF-IDF</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>KL Divergence</a>)
 
 * Newton Method (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/newton%20method%20for%20logistic%20regression.ipynb>Logistic Regression</a>)
 
