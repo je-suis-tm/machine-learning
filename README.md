@@ -38,7 +38,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 * Principal Component Analysis (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Eigenvectors</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Singular Value Decomposition</a>)
 
-* Expectation Maximization (Factor Analysis)
+* Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/factor%20analysis.ipynb>Factor Analysis</a>)
 
 ## Applications
 
