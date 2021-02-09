@@ -16,7 +16,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 * Generative Learning (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20discriminant%20analysis.ipynb>Gaussian Discriminant Analysis</a>)
 
-* Gradient Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Batch</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Stochastic</a>)
+* Gradient Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Batch</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Stochastic</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Mini-batch</a>)
 
 * Naïve Bayes (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multivariate</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multinomial</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>TF-IDF</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>KL Divergence</a>)
 
