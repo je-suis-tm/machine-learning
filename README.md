@@ -36,7 +36,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 * Distribution-based Model (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes%20mixture%20model.ipynb>Naïve Bayes Mixture Model</a>)
 
-* Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/factor%20analysis.ipynb>Factor Analysis</a>)
+* Expectation Maximization (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/factor%20analysis.ipynb>Factor Analysis</a>/Dawid-Skene Model/Platt-Burges Model)
 
 * Principal Component Analysis (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Singular Value Decomposition</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Low Rank Approximation</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/latent%20semantic%20indexing.ipynb>Latent Semantic Indexing</a>)
 
