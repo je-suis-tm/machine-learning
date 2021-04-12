@@ -56,11 +56,11 @@ Every now and then, we read some bulge brackets hit the headline, “XXX will re
 
 ### Further Reading
 
-1. Dawid AP, Skene AM (1979) <a href=https://www.semanticscholar.org/paper/Maximum-Likelihood-Estimation-of-Observer-Using-the-Dawid-Skene/c80c7ab615b2fad5148a7848dbdd26a2dc50dd3d>Maximum Likelihood Estimation Of Observer Error-rates Using The Em Algorithm</a>
+1. Dawid AP, Skene AM (1979) <a href=https://www.semanticscholar.org/paper/Maximum-Likelihood-Estimation-of-Observer-Using-the-Dawid-Skene/c80c7ab615b2fad5148a7848dbdd26a2dc50dd3d>Maximum Likelihood Estimation Of Observer Error-rates Using The EM Algorithm</a>
 
 	*The original paper of Dawid-Skene Model*
 
-2. Dempster AP, Laird NM, Rubin DB (1977) <a href=https://web.mit.edu/6.435/www/Dempster77.pdf>Maximum Likelihood From Incomplete Data Via The Em Algorithm</a>
+2. Dempster AP, Laird NM, Rubin DB (1977) <a href=https://web.mit.edu/6.435/www/Dempster77.pdf>Maximum Likelihood From Incomplete Data Via The EM Algorithm</a>
 
 	*The original paper of EM Algorithm*
 
