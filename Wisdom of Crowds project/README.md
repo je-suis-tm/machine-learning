@@ -48,13 +48,32 @@ The scatter plot is even more intriguing. Excluding precious metal silver and go
 
 ### Dawid-Skene Model
 
+Now that we have seen the malaise of descriptive statistics. The consensus average is supposed to eliminate random errors that affect each banker’s answer in a different way, yet the average error is still ridiculously large. Perhaps the method of averaging is too naïve. A more advanced model is summoned to tackle the base rate bias, the tendency for bankers to base predictions on what they know. 
+
+Dawid-Skene Model was developed to assess a patient’s true response in regarding to different answers to different clinicians. Nowadays it is a common practice in crowd sourcing problem, e.g. data labelling for supervised learning. This model applies an algorithm on discrete classifications to aggregate individual opinions into one collective decision so that we can save money and time from domain knowledge training for data labelling. It takes into account of the heterogeneity of annotators and the complexity of fortune telling. 
+
+DS Model is one of the few models where text explanation is more comprehensive than math notations. The model per se is solved via Expectation Maximization algorithm. The steps are illustrated below.
+
+1.	Initialize the prior labels with majority voting technique.
+2.	E-step: compute the confusion matrix for each annotator and obtain the probability of each annotator’s current answer given the prior labels as conditional probability.
+3.	M-step: obtain the fraction of the prior labels as unconditional probability and multiply it by conditional probability. Compute the posterior labels based on each label’s possibility.
+4.	Repeat E-step and M-step until convergence. Convergence is defined as the posterior labels do not change over the iterations.
+
+In our particular case, the annotators refer to the banks. Each question refers to a commodity. The models only contain two labels (I have never seen flat price forecast from banks), price upside risk and price downside risk.
+
+For current year outlook, the model yields the same answer as Citigroup, Commonwealth Bank, Deutsche Bank and Goldman Sachs. On the bright side, half of the banks made a 100% accurate guess whereas the other half begs to differ on only one commodity – Platinum. On the dark side, this could be an indication of monoculture. For wisdom of crowds to work, there is one crucial element, diversity. The crowds must be characterized by different opinions and each person's opinion should be independent and free from the influence of others. DS Model cannot eliminate systematic errors that affect the opinions of the entire crowd. It can merely offset random errors caused by each person’s base rate bias. 
+
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y0%20direction%20by%20banks.png)
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y0%20direction%20by%20commodities.png)
 
+For one year ahead outlook, the model yields the same answer as JP Morgan, less than 40% of the price direction is correctly projected. Even for the best performers, Citigroup and BOAML, they do not outperform tossing a coin by any chance. In another word, these banks fail spectacularly. According to the result breakdown by commodities, nobody managed to get Aluminum and Henry Hub natural gas right. The ones with high accuracy are electric vehicle related – nickel, copper and platinum.
+
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y1%20direction%20by%20banks.png)
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y1%20direction%20by%20commodities.png)
+
+Au fait, DS Model is an exceptional model to calibrate the base rate bias. In its defense, the poor performance in our task is caused by the lack of diverse opinions. Financial industry does not have a diverse pool of participants. The candidates are generally screened by target university and private school at the recruitment stage. Especially when it comes to research analysts, they don’t have any collective knowledge and they forecast the market based on public polling data.  When analysts are aware of what the competitors are writing, they usually come up with something deviating no more than one sigma from the mean to justify their stories. This type of consensus thinking can, unsurprisingly, lead to poor group decision making. To add more fuel to the fire, research analysts do not get paid by conducting excellent research or telling fascinating stories. Their KPI is based upon clients’ rating. Their ability to entertain the clients is somehow more influential than their research capability (one big night with the client is worth a thousand reports). To put it plainly, there are too many analysts who cannot do Newton-Leibniz theorem right and you expect them to tell you what the price would be in one year’s time? Beautiful anecdotical stories doesn’t mean shit in terms of proofs. 
 
 ### Platt-Burges Model
 
@@ -67,6 +86,8 @@ The scatter plot is even more intriguing. Excluding precious metal silver and go
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y1%20forecast%20bias.png)
 
 ### Discussion
+
+
 
 ### Further Reading
 
