@@ -77,6 +77,10 @@ Au fait, DS Model is an exceptional model to calibrate the base rate bias. In it
 
 ### Platt-Burges Model
 
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/e-step.JPG)
+
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/m-step.JPG)
+
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y0%20error%20by%20commodities.png)
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y0%20forecast%20bias.png)
