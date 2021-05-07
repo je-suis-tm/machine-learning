@@ -132,7 +132,7 @@ Wisdom of crowds in the financial industry is fictional. This article has invoke
 
 1. Dawid AP, Skene AM (1979) <a href=https://www.semanticscholar.org/paper/Maximum-Likelihood-Estimation-of-Observer-Using-the-Dawid-Skene/c80c7ab615b2fad5148a7848dbdd26a2dc50dd3d>Maximum Likelihood Estimation Of Observer Error-rates Using The EM Algorithm</a>
 
-	*This is the original paper of Dawid-Skene model where the model is used to assess a patient’s true response in regarding to different answers to different clinicians. Although for a gentle introduction, I would recommend <a href=https://sukrutrao.github.io/project/fast-dawid-skene/Fast-Dawid-Skene.pdf>Fast Dawid-Skene by Vaibhav B. Sinha et al.</a>
+	*This is the original paper of Dawid-Skene model where the model is used to assess a patient’s true response in regarding to different answers to different clinicians. Although for a gentle introduction, I would recommend <a href=https://sukrutrao.github.io/project/fast-dawid-skene/Fast-Dawid-Skene.pdf>Fast Dawid-Skene by Vaibhav B. Sinha et al.</a>*
 
 2. Dempster AP, Laird NM, Rubin DB (1977) <a href=https://web.mit.edu/6.435/www/Dempster77.pdf>Maximum Likelihood From Incomplete Data Via The EM Algorithm</a>
 
