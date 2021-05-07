@@ -81,19 +81,19 @@ It is rather implausible to calibrate the direction forecast under the influence
 
 Platt-Burges model was developed to adjust the paper submission mechanism for NIPS conference. Assuming `P` papers are submitted to the conference and `R` reviewers in the committee mark the score of these papers, each paper will be given `R` different scores by all the reviewers (matrix completion is beyond the scope of this project). Some reviewers are harsh and they tend to give low scores to every paper. Some reviewers are moody and their scores depend on how many :doughnut: they have eaten for lunch. Thus, the score of a paper given by a reviewer, denoted as `x`, can be decomposed into the linear combination of three components – the underlying intrinsic value `y`, the reviewer bias `z` and some random disturbance `ε`. As we can only observe the variable `x`, `y` and `z` are the latent variables of our interest. To make the life easier, we assume `x`, `y` and `z` independently follow different Gaussian distributions.
 
-![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/distribution.png)
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/distribution.PNG)
 
 To obtain latent variables, there are two methods. One is the Expectation Maximization algorithm. Lucky for us, the solution is given in Andrew Ng’s machine learning coursework problem set 4 in autumn 2016. We can compute the posterior probability in E step
 
-![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/e-step.jpg)
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/e-step.JPG)
 
 We can solve the maximum logarithm likelihood in M step
 
-![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/m-step.jpg)
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/m-step.JPG)
 
 EM algorithm will be the main method in this article to approximate the reviewer bias. However, John Platt and Chris Burges proposed a regularized linear regression with L2 penalty (ridge regression) to solve the equation in closed form. This will be a lot faster for PB Model to converge to local optima compared to EM algorithm.
 
-![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/regularized.png)
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/regularized.PNG)
 
 In our particular case, the reviewers refer to the banks. Each paper refers to the commodity price. The attempt is to aggregate the consensus forecast into one price one commodity and remove the analyst bias embedded inside the price formation.
 For current year outlook, the forecast error is positively correlated with the commodity volatility apart from some outliers like Brent, WTI and silver. After all, this hardly come as any surprise. We already have seen the spot forecast error is twice as large as consensus in descriptive statistics. The only exception is platinum where spot has smaller error and this is also where half of the banks bet on the wrong direction. Meanwhile PB model has flexed some muscles. In most cases, it demonstrates a lower forecast error than raw consensus. It only fails at nickel and some precious metals such as gold, silver and platinum. The model works even in a crowd with poor judgement.
