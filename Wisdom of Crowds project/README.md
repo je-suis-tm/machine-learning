@@ -50,14 +50,14 @@ The scatter plot is even more intriguing. Excluding precious metal silver and go
 
 Now that we have seen the malaise of descriptive statistics. The consensus average is supposed to eliminate random errors that affect each banker’s answer in a different way, yet the average error is still ridiculously large. Perhaps the method of averaging is too naïve. A more advanced model is summoned to tackle the base rate bias, the tendency for bankers to base predictions on what they know. 
 
-Dawid-Skene Model was developed to assess a patient’s true response in regarding to different answers to different clinicians. Nowadays it is a common practice in crowd sourcing problem, e.g. data labelling for supervised learning. This model applies an algorithm on discrete classifications to aggregate individual opinions into one collective decision so that we can save money and time from domain knowledge training for data labelling. It takes into account of the heterogeneity of annotators and the complexity of fortune telling. 
+Dawid-Skene model was developed to assess a patient’s true response in regarding to different answers to different clinicians. Nowadays it is a common practice in crowd sourcing problem, e.g. data labelling for supervised learning. This model applies an algorithm on discrete classifications to aggregate individual opinions into one collective decision so that we can save money and time from domain knowledge training for data labelling. It takes into account of the heterogeneity of annotators and the complexity of fortune telling. 
 
 DS Model is one of the few models where text explanation is more comprehensive than math notations. The model per se is solved via Expectation Maximization algorithm. The steps are illustrated below.
 
-1.	Initialize the prior labels with majority voting technique.
-2.	E-step: compute the confusion matrix for each annotator and obtain the probability of each annotator’s current answer given the prior labels as conditional probability.
-3.	M-step: obtain the fraction of the prior labels as unconditional probability and multiply it by conditional probability. Compute the posterior labels based on each label’s possibility.
-4.	Repeat E-step and M-step until convergence. Convergence is defined as the posterior labels do not change over the iterations.
+1. Initialize the prior labels with majority voting technique.
+2. E-step: compute the confusion matrix for each annotator and obtain the probability of each annotator’s current answer given the prior labels as conditional probability.
+3. M-step: obtain the fraction of the prior labels as unconditional probability and multiply it by conditional probability. Compute the posterior labels based on each label’s possibility.
+4. Repeat E-step and M-step until convergence. Convergence is defined as the posterior labels do not change over the iterations.
 
 In our particular case, the annotators refer to the banks. Each question refers to a commodity. The models only contain two labels (I have never seen flat price forecast from banks), price upside risk and price downside risk.
 
@@ -73,36 +73,75 @@ For one year ahead outlook, the model yields the same answer as JP Morgan, less 
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y1%20direction%20by%20commodities.png)
 
-Au fait, DS Model is an exceptional model to calibrate the base rate bias. In its defense, the poor performance in our task is caused by the lack of diverse opinions. Financial industry does not have a diverse pool of participants. The candidates are generally screened by target university and private school at the recruitment stage. Especially when it comes to research analysts, they don’t have any collective knowledge and they forecast the market based on public polling data.  When analysts are aware of what the competitors are writing, they usually come up with something deviating no more than one sigma from the mean to justify their stories. This type of consensus thinking can, unsurprisingly, lead to poor group decision making. To add more fuel to the fire, research analysts do not get paid by conducting excellent research or telling fascinating stories. Their KPI is based upon clients’ rating. Their ability to entertain the clients is somehow more influential than their research capability (one big night with the client is worth a thousand reports). To put it plainly, there are too many analysts who cannot do Newton-Leibniz theorem right and you expect them to tell you what the price would be in one year’s time? Beautiful anecdotical stories doesn’t mean shit in terms of proofs. 
+Au fait, DS Model is an exceptional model to calibrate the base rate bias. In its defense, the poor performance in our task is caused by the lack of diverse opinions. Financial industry does not have a diverse pool of participants. The candidates are generally screened by target university and private school at the recruitment stage. Especially when it comes to research analysts, they don’t have any collective knowledge and they forecast the market based on public polling data. To add more fuel to the fire, research analysts do not get rated by conducting excellent research or telling fascinating stories. Their rating is based upon clients’ perception. Their ability to entertain the clients is somehow more influential than their research capability (one big night with the client is worth a thousand reports). To put it plainly, there are too many analysts who cannot do Newton-Leibniz theorem right and you expect them to tell you what the price would be in one year’s time? They are good at Latin quotes used in a variety of ways in the rhetoric but beautiful anecdotical stories doesn’t mean shit in terms of proofs. 
 
 ### Platt-Burges Model
 
-![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/e-step.JPG)
+It is rather implausible to calibrate the direction forecast under the influence of detrimental herding effect. We can still calibrate our mentality and change the objective. Now the end game is to work on the continuous case and calibrate the price prediction to minimize the forecast error. Let’s introduce a different model called Platt-Burges.
 
-![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/m-step.JPG)
+Platt-Burges model was developed to adjust the paper submission mechanism for NIPS conference. Assuming `P` papers are submitted to the conference and `R` reviewers in the committee mark the score of these papers, each paper will be given `R` different scores by all the reviewers (matrix completion is beyond the scope of this project). Some reviewers are harsh and they tend to give low scores to every paper. Some reviewers are moody and their scores depend on how many :doughnut: they have eaten for lunch. Thus, the score of a paper given by a reviewer, denoted as `x`, can be decomposed into the linear combination of three components – the underlying intrinsic value `y`, the reviewer bias `z` and some random disturbance `ε`. As we can only observe the variable `x`, `y` and `z` are the latent variables of our interest. To make the life easier, we assume `x`, `y` and `z` independently follow different Gaussian distributions.
+
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/distribution.png)
+
+To obtain latent variables, there are two methods. One is the Expectation Maximization algorithm. Lucky for us, the solution is given in Andrew Ng’s machine learning coursework problem set 4 in autumn 2016. We can compute the posterior probability in E step
+
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/e-step.jpg)
+
+We can solve the maximum logarithm likelihood in M step
+
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/m-step.jpg)
+
+EM algorithm will be the main method in this article to approximate the reviewer bias. However, John Platt and Chris Burges proposed a regularized linear regression with L2 penalty (ridge regression) to solve the equation in closed form. This will be a lot faster for PB Model to converge to local optima compared to EM algorithm.
+
+![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/regularized.png)
+
+In our particular case, the reviewers refer to the banks. Each paper refers to the commodity price. The attempt is to aggregate the consensus forecast into one price one commodity and remove the analyst bias embedded inside the price formation.
+For current year outlook, the forecast error is positively correlated with the commodity volatility apart from some outliers like Brent, WTI and silver. After all, this hardly come as any surprise. We already have seen the spot forecast error is twice as large as consensus in descriptive statistics. The only exception is platinum where spot has smaller error and this is also where half of the banks bet on the wrong direction. Meanwhile PB model has flexed some muscles. In most cases, it demonstrates a lower forecast error than raw consensus. It only fails at nickel and some precious metals such as gold, silver and platinum. The model works even in a crowd with poor judgement.
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y0%20error%20by%20commodities.png)
 
+If we take a deep dive into each bank’s bias level, we can see that Commonwealth bank is the most bearish. On average, it creates -1.6% on the price forecast. Commonwealth bank also has one of the smallest standard deviation at merely 1.3%. Recalled from the descriptive statistics, Commonwealth bank is the most accurate fortune teller, consistently in both current year and one year ahead outlook. On the contrary, the second most accurate, BOAML, is the most bullish on commodities. It is also one of the moodiest fortune tellers where its mood swing (standard deviation) is the second highest. Oddly enough, the worst performers BMO and TD Securities are also bullish on commodities with volatile mood swing. It seems that bearish/bullish bias does not affect the forecast accuracy much. It is the bias volatility that determines the performance of the forecast. This makes a lot of sense. The commodity market is deeply intertwined as energy is the foundation to extract every commodity and metals are usually discovered in several groups at the exploration stage. The best forecast should be consistent with all the battle fronts.
+
+
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y0%20forecast%20bias.png)
+
+For one year ahead outlook, we still observe the phenomenon of high volatility causing high error. As usual, we can still encounter some rebellious commodities such as Henry Hub natural gas, thermal coal and zinc. The spread between spot error and consensus error expands dramatically as the volatility decreases. On average, the spot error is merely 75% of the consensus error. Spot only fails at electric vehicle materials such as copper and nickel. Furthermore, PB model withstands the test and beats the raw consensus again. The model only fails at nickel and precious metals like gold and silver. The calibrated number usually lies between spot and consensus with a bit tilted to consensus.
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y1%20error%20by%20commodities.png)
 
+When it comes to the forecast bias, nothing is more interested than Commonwealth bank. It is consistently bearish with -0.3% and consistently outperforms the other banks. Its bias volatility is always kept at bare minimum. Other good performers such as Deutsche Bank or Goldman Sachs share the similar traits of bearish bias and small mood swing. The consistent worst performers, BMO and TD Securities are a bit different. TD Securities have the most bullish bias with ridiculously volatility whereas BMO has moderate level of forecast bias and volatility. Overall, the numbers do confirm the theory that being consistent on every aspect of the forecast is critical to minimize the error.
+
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/y1%20forecast%20bias.png)
+
+So, is there any intrinsic value buried under the wisdom of crowds? No. The consensus forecast is a typical example of a crowd failure. The analysts grow too conscious of the opinions of others and begin to emulate one another and to conform rather than think independently. In banks, it’s common for extraverted analysts to be featured in Bloomberg surveillance or other business interviews to gain more exposure. Once the reputation begins to snowball, the analyst’s opinion will weigh more and more among other analysts, albeit he might not necessarily be the most knowledgeable person. Other analysts would avoid challenging the star analyst’s narrative and consider him credible and trustworthy which, again, can only compound the original problem. This type of consensus thinking can, unsurprisingly, lead to poor group decision making. With some advanced machine learning models like Platt-Burges, we may be able to improve the collective cognition by a tiny margin. But no model can fix the copycat behavior among research analysts. According to <a href=https://www.bloomberg.com/professional/blog/future-investment-research-post-mifid-ii>EuroMoney</a>, investment banks produce roughly 8000 research reports a day, adding up to 3 million each year, of which maybe 5% are actually read. With so few headcounts and so much pressure around earning release, I just cannot believe they are capable of producing insightful and counter-consensus reports. A few years back, I read some reports erroneously comprise decision tree to determine the causality of some variables, as if to reassure the readers with a scientific guarantee: the mathematical result is stated as an inarguable truth in order to establish the argument. On the contrary, their lack of knowledge in machine learning creates no credibility at all, I sincerely hope that MiFiD II has sent these clowns out of jobs.
 
 ### Discussion
 
+> Always remember that the crowd that applauds your coronation is the same crowd that will applaud your beheading. People like a show. <br><br>
+> --- Terry Pratchett, Going Postal
 
+What exactly is wisdom of crowds? Let’s define the crowd first. The crowd should be characterized by a diversity of components that enables a complementarity of viewpoints, interests and knowledge. Instead of the toxic ethnicity and gender talk, diversity refers to differences in problem solvers’ perspectives and heuristics variations in how people encode and search for solutions to problems (Hong & Page, 1998). There is certain doxa that wisdom of crowds exists because the aggregation eliminates the idiosyncratic error of the individual judgement. This can be proved in a more rigorous way. In statistics, König-Huygens formula signifies that the variance of a random variable is equal to the difference between the expected value squared and the square of the expected value. 
+
+`Var(X)=E(X^2)-E^2(X)`
+
+This translates to “diversity prediction” theorem proposed by Lu Hong and Scott E. Page. The greater the diversity, the better the collective performance. The squared error of group individuals (`E(X^2)`) equals to the error of the group (`E^2(X)`) plus the diversity of the group (`Var(X)`). Since we cannot alter the individual cognition, the rise of the variance (diversity) must be offset by the drop of the group error. While the variance term is non-negative, this guarantees the episteme that the error of the group is always smaller than the average error of group individuals. Hence, wisdom of crowds exists, but not without perquisites. As we have emphasized, the essential element of a good crowd is diversity. A homogenous crowd is more likely to send Socrates to death and Thucydides to exile. Another caveat is independence. Humans are sociable creatures who operate in crowds. When our independent thinking declines, we start to imitate others around us and follow blindly towards a relatively arbitrary position. The diversity of the crowd vanishes.
+
+Wisdom of crowds in the financial industry is fictional. This article has invoked three different methods to provide evidence for the idea: spot price is king and consensus price is garbage. Then why are portfolio managers still wasting time to reading these crappy reports? Alpha is rare. They can only chase alpha with disruptive innovation rather than plagiary among the banks. Are they really that dumb? No. “No one ever made a decision because of a number. They need a story”, said by Nobel laureate Daniel Kahneman. Nobody reads bank reports to gain insight of the future. They just need a story to persuade their fund managers to trade. When shit goes wrong, they can always blame it on some lame analysts. That is the wisdom of crowds!
 
 ### Further Reading
 
 1. Dawid AP, Skene AM (1979) <a href=https://www.semanticscholar.org/paper/Maximum-Likelihood-Estimation-of-Observer-Using-the-Dawid-Skene/c80c7ab615b2fad5148a7848dbdd26a2dc50dd3d>Maximum Likelihood Estimation Of Observer Error-rates Using The EM Algorithm</a>
 
-	*The original paper of Dawid-Skene Model*
+	*This is the original paper of Dawid-Skene model where the model is used to assess a patient’s true response in regarding to different answers to different clinicians. Although for a gentle introduction, I would recommend <a href=https://sukrutrao.github.io/project/fast-dawid-skene/Fast-Dawid-Skene.pdf>Fast Dawid-Skene by Vaibhav B. Sinha et al.</a>
 
 2. Dempster AP, Laird NM, Rubin DB (1977) <a href=https://web.mit.edu/6.435/www/Dempster77.pdf>Maximum Likelihood From Incomplete Data Via The EM Algorithm</a>
 
-	*The original paper of EM Algorithm*
+	*This is the original paper of Expectation Maximization algorithm. It is one of the most common algorithms in unsupervised learning where you cannot solve the partial derivatives in closed form.*
 
 3. Ge H, Welling M, Ghahramani Z (2015) <a href=http://mlg.eng.cam.ac.uk/hong/unpublished/nips-review-model.pdf>A Bayesian Model For Calibrating Reviewer Scores</a>
 
-	*The only existing paper on Platt-Burges Model*
+	*This is the only existing paper on Platt-Burges model and its more advanced variations. In contrast to EM approach in this article, this paper solves the equation in ridge regression. An alternative material would be <a href=https://inverseprobability.com/2014/08/02/reviewer-calibration-for-nips>Neil Lawrence’s personal blog</a>.*
+
+4. Hong L, Page SE (2004) <a href=https://www.pnas.org/content/101/46/16385>Groups Of Diverse Problem Solvers Can Outperform Groups Of High-ability Problem Solvers</a>
+
+	*This is the paper where the authors use agent-based model to prove “diversity trumps ability” theorem. A diverse group of people regardless of their empirical or theoretical knowledge is better than a group of best performing individuals and experts.* 
