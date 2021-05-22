@@ -14,13 +14,13 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 ### Supervised
 
-* Coordinate Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/elastic%20net.ipynb>Lasso Regression</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/elastic%20net.ipynb>Elastic Net Regression</a>)
+* Coordinate Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Lasso Regression</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Elastic Net Regression</a>)
 
 * Generative Learning (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20discriminant%20analysis.ipynb>Gaussian Discriminant Analysis</a>)
 
 * Gradient Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Batch</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Stochastic</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gradient%20descent.ipynb>Mini-batch</a>)
 
-* Least Squares (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/elastic%20net.ipynb>Linear Regression</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/elastic%20net.ipynb>Ridge Regression</a>)
+* Least Squares (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Linear Regression</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Ridge Regression</a>)
 
 * Naïve Bayes (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multivariate</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>Multinomial</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>TF-IDF</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/naive%20bayes.ipynb>KL Divergence</a>)
 
