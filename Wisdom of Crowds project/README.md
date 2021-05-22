@@ -91,7 +91,7 @@ We can solve the maximum logarithm likelihood in M step
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/m-step.JPG)
 
-EM algorithm will be the main method in this article to approximate the reviewer bias. However, John Platt and Chris Burges proposed a regularized linear regression with L2 penalty (ridge regression) to solve the equation in closed form. This will be a lot faster for PB Model to converge to local optima compared to EM algorithm.
+EM algorithm will be the main method in this article to approximate the reviewer bias. However, John Platt and Chris Burges proposed a regularized least squares with L2 penalty (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Ridge Regression</a>) to solve the equation in closed form. This will be a lot faster for PB Model to converge to local optima compared to EM algorithm.
 
 ![alt text](https://github.com/je-suis-tm/machine-learning/blob/master/Wisdom%20of%20Crowds%20project/preview/regularized.PNG)
 
