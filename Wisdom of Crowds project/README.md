@@ -145,3 +145,11 @@ Wisdom of crowds in the financial industry is fictional. This article has invoke
 4. Hong L, Page SE (2004) <a href=https://www.pnas.org/content/101/46/16385>Groups Of Diverse Problem Solvers Can Outperform Groups Of High-ability Problem Solvers</a>
 
 	*This is the paper where the authors use agent-based model to prove “diversity trumps ability” theorem. A diverse group of people regardless of their empirical or theoretical knowledge is better than a group of best performing individuals and experts.*
+	
+5. Kelley EK, Tetlock PC (2012) <a href=https://www.emilianopagnotta.com/descarga/discussions/Wisodm_Crowds.pdf>How Wise Are Crowds? Insights From Retail Orders And Stock Returns</a>
+
+	*This paper studies a database of executed retail trades with its value over $2.6 trillion via multivariate regression. It shows that retail trading from the crowd conveys information about future stock prices.*
+	
+6. Nofer M, Hinz O (2014) <a href=https://www.semanticscholar.org/paper/Are-crowds-on-the-internet-wiser-than-experts-The-a-Nofer-Hinz/caa95ea7fd848cf45159a899923ffbffa5e9f02f>Are Crowds On The Internet Wiser Than Experts? The Case Of A Stock Prediction Community</a>
+
+	*This paper proves that an amateur crowd on the internet is able to make better predictions on DAX than professional analysts from banks, brokers and research companies via multivariate regression. Hooray to Deutsche WallStreetBets!*
