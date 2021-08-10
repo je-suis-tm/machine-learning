@@ -92,17 +92,23 @@ The rest of the operation is the same as the bar chart. In this case, the horizo
 
 ### Distribution Model
 
-Theoretically, K Means is a special case of expectation maximization algorithm. The computation of the new centroid is considered as E step. The label update of the underlying data points is considered as M step. In this chapter, we intend to examine the generalized case. One of the most common models powered by EM algorithm is <a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>. GMM studies the mixture of different Gaussian distributions. Does GMM provide a better solution to the overlapping problem in bar chart?
+Theoretically, K Means is a special case of expectation maximization algorithm. The computation of the new centroid is considered as E step. The label update of the underlying data points is considered as M step. In this chapter, we intend to examine the generalized case. One of the most common models powered by EM algorithm is <a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20mixture%20model.ipynb>Gaussian Mixture Model</a>. Since GMM studies the mixture of different Gaussian distributions, GMM has the magic to untangle the overlapped area where the result may point to multiple distributions. We cannot stop to wonder whether GMM provides a better solution to the bar chart. 
 
-![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20dirichlet.jpg)
+On the other hand, GMM doesn’t come without its caveat. Similar to K Means, GMM requires the hyper-parameter – number of clusters. Aside from that, the initial value of GMM is more complex. Instead of several random centroids, GMM requires mean, standard variation and weight of each distribution to kick start. A quick start of GMM requires the initial result from K Means. Then GMM merely focuses on the intersection of different clusters to create clear cut boundaries.
+
+To select optimal number of clusters, GMM can borrow Akaike Information Criterion and Bayesian Information Criterion from Gaussian distributions. Conventionally, lower AIC or BIC is always better. Nonetheless, I found that global minima of AIC or BIC rarely occurs in many real life applications. Empirically speaking, both AIC and BIC should be taken into account. By taking elbow method to locate the gradient dip, I prefer to take the minimum between AIC-indicated number of clusters and BIC-indicated number of clusters.
+
+The image below is the decomposition of bar chart by GMM. Undesirably, six clusters have been identified. Many of the clusters are some colors human eyes cannot detect. As I frequently insist, machine learning is a state of art. Without domain knowledge, hyper-parameter tuning is like searching a drop in the ocean.
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20gmm.jpg)
 
-![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20line%20dirichlet.jpg)
+![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20dirichlet.jpg)
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20line%20gmm.jpg)
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/line%20erosion2%20gmm.png)
+
+![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20line%20dirichlet.jpg)
 
 ### Density Model
 
