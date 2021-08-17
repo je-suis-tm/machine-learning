@@ -11,6 +11,9 @@
 * <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#distribution-model>Distribution Model</a>
 
 * <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#density-model>Density Model</a>
+
+* <a href=https://github.com/je-suis-tm/machine-learning/tree/master/Reverse%20Engineering%20project#discussion>Discussion</a>
+
 ------------------------------------------------
 &nbsp;
 
@@ -133,9 +136,24 @@ With respect to DPGMM, 17 clusters are identified despite we initialize with 20 
 
 ### Density Model
 
+After trying centroid and distribution model, the last but not least is density-based models such as <a href=https://github.com/je-suis-tm/machine-learning/blob/master/dbscan.ipynb>DBSCAN</a> or <a href=https://github.com/je-suis-tm/machine-learning/blob/master/optics.ipynb>OPTICS</a>. Unlike K Means or GMM, DBSCAN provides non-linear boundary clustering. This type of model was born to detect arbitrarily shaped clusters. 
+
+The way to detect clusters relies on distance measure. The distance measure `ε` defines the maximum distance between two data points within the same cluster. To identify a cluster is the same as constructing a topological structure like geometric graph. This also implies the model is robust even trained with noisy dataset. However, the optimal distance measure `ε` is too challenging to configure without domain knowledge. Another faux pas is within-cluster variance. When the distance distribution within the cluster gets fat tail, density model is unlikely to work well.
+
+In our case, the data point is scattered sparsely on RGB 3-dimensional space. Inevitably, the density of each cluster should be high due to the fact that Euclidean distances within the same color group are small. The distance between two cluster is supposed to be significant which attributes to the fact that distinct curve colors in chart convey messages in a more straight-forward way. Although the boundary is anticipated to be linear, DBSCAN shouldn’t do too bad even with mediocre distance measure.
+
+As a matter of fact, we didn’t manage to use DBSCAN with a feasible distance measure. By using knee method, KNN distance concludes zero is the optimal choice. Apparently, more advanced technique to select `ε` is a must. That’s why we have OPTICS. 
+
+OPTICS utilizes a special ordering based upon the organic order and the reachability distance to skip the needle search of optimal `ε` in the haystack. As a result of quid pro quoi, `ξ` is a new parameter to determine the steep upward and downward areas in reachability plot. The valleys between steep upward and downward areas would be identified as clusters. The optimal `ξ` is an elephant in the room of machine learning. Nobody talks about how to pick the best criterion for reachability. To make our life easier, let’s just take the default value 0.05 from `sklearn`.
+
+In the bar chart, OPTICS give us eight clusters, pretty much on par with DPGMM. Again and again, the model complexity doesn’t translate to the cluster accuracy! Let’s not use sledgehammer to crack a nut.
+
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20bar%20optics.png)
+
+If the result of bar chart is reasonably complicated, the result of line chart is then outrageous. It takes approximately 15-20 minutes to run OPTICS on line chart. We end up with 137 clusters??? To be fair, basically every unique RGB value forms a cluster. The subtitle of density model should be replaced by “how to build Rube Goldberg machine”!
 
 ![Alt Text](https://github.com/je-suis-tm/machine-learning/blob/master/Reverse%20Engineering%20project/preview/color%20channels%20line%20optics.png)
 
+### Discussion
 
-
+In summary, we have proposed three different types of unsupervised learning models to reverse engineer charts. The pain point of the process is to automatically separate different color channels. Well, panacea doesn’t exist. No single model has proven its stable performance in both line and bar charts. Regardless of all the scenic routes we have taken in unsupervised learning, K Means is absolutely the best choice considering its simplicity and accuracy. With a little bit of manual cropping and cluster count, our tool can seamlessly approximate the original data and replicate the underlying chart. They said data is the new (snake) oil. Imagine how many barrels this project “Aramco” could’ve extracted!
