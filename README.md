@@ -46,7 +46,7 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 * Principal Component Analysis (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Singular Value Decomposition</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/principal%20component%20analysis.ipynb>Low Rank Approximation</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/latent%20semantic%20indexing.ipynb>Latent Semantic Indexing</a>)
 
-* Recommender System (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/recommender%20system.ipynb>Funk SVD</a>/SVD++)
+* Recommender System (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/recommender%20system.ipynb>Funk SVD</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/recommender%20system.ipynb>SVD++</a>)
 
 * Signal Processing (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/independent%20component%20analysis.ipynb>Independent Component Analysis</a>)
 
