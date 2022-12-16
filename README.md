@@ -14,6 +14,8 @@ This repository is based upon the <a href=http://cs229.stanford.edu/syllabus-fal
 
 ### Supervised
 
+* Approximate Bayesian Computation
+
 * Coordinate Descent (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Lasso Regression</a>/<a href=https://github.com/je-suis-tm/machine-learning/blob/master/coordinate%20descent%20for%20elastic%20net.ipynb>Elastic Net Regression</a>)
 
 * Generative Learning (<a href=https://github.com/je-suis-tm/machine-learning/blob/master/gaussian%20discriminant%20analysis.ipynb>Gaussian Discriminant Analysis</a>)
